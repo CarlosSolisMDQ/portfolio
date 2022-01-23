@@ -1,0 +1,19 @@
+*{
+    margin: 20px;
+    
+   
+    
+}
+
+
+
+.container{
+     margin-left: 10em;
+    margin-right: 10em;
+    
+}
+
+.border-section>p{
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 10px;
+}

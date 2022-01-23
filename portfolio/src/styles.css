@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+    background-color: white;
+  }
+  
+  @font-face {
+    font-family: 'Urbani';
+    src: local('Urbani Extra Bold'), local('Urbani-Extra-Bold'),
+        url('assets/fonts/Urbani-ExtraBold.woff2') format('woff2'),
+        url('assets/fonts/Urbani-ExtraBold.woff') format('woff'),
+        url('assets/fonts/Urbani-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  html, body { height: 100%; }
+  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

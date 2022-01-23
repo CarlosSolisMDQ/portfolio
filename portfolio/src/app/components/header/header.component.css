@@ -1,0 +1,98 @@
+.header-container{
+    background-image: url(../../../assets/gradiente.png);
+    height: 20em;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-container>i{
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: 0%;
+}
+
+    
+    .btn-login{
+    
+    margin-left: auto;
+        
+}
+
+
+
+.img-portrait{
+    width: 10em;
+    height: 10em;
+    background-color: brown;
+    margin-left: 5em;
+    margin-top: -5em;
+    background-image: url(../../../assets/imagencaraejemplo.jpeg);
+    background-size: contain;
+    
+}
+
+.img-portrait > i{
+    padding: 10px;
+    margin-left: 80%;
+    margin-right: 0%;
+    margin-top: 80%;
+    margin-bottom: 0%;
+}
+
+.ap-logo{
+    height: 5em;
+    background-color: black;
+    display:  flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: white;
+}
+
+.redes{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 1em;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.redes>i{
+    margin-left: 10px;
+}
+
+.redes>.btn-login{
+    margin-left: 2em;
+}
+
+.redes>i:hover{
+    transition: 0.9s;
+    transform: rotate(20deg);
+    color: red;
+}
+
+.ap-logo>img{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1em;
+    margin-right: 2em;
+}
+
+.ap-logo>p {
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    font-family: 'Urbani';
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+
+.ap-logo>img{
+    max-width: 100%;
+    max-height: 100%;
+}

@@ -1,0 +1,16 @@
+
+<h2>skills works! <i class="fas fa-plus"></i></h2>
+
+<div *ngFor="let skill of skills">
+    
+    <progress id="porcentaje-bar" max="100" value={{skill.porcentaje}}> {{skill.porcentaje}} </progress>
+    
+    
+    <p>{{skill.habilidad}}</p>
+<div class="erase-icon">
+    
+    <i class="far fa-trash-alt"></i>
+
+</div>
+
+</div>

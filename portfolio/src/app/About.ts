@@ -1,0 +1,1 @@
+export const ABOUT = "Sit veniam eu deserunt exercitation mollit eu occaecat adipisicing nostrud anim. Eu sunt officia ipsum dolor est officia proident in cupidatat duis enim ea sunt et. Deserunt enim Lorem pariatur enim deserunt nostrud mollit Lorem labore voluptate adipisicing."

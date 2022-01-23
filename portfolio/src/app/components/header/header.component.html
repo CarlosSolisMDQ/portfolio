@@ -1,0 +1,33 @@
+<div class="ap-logo">
+    <img class="ap-logo-image" src="../../../assets/APLogo-20-20.png">
+    <p>#YoProgramo</p>
+    <div class="redes">
+      <i class="fab fa-instagram fa-3x"></i>
+      <i class="fab fa-github fa-3x"></i>
+      <i class="fab fa-linkedin fa-3x"></i>
+      <i class="fab fa-whatsapp fa-3x"></i>
+      <div class="btn-login">
+        <app-button class="btn-login-toggle"
+          color="{{ showLoginLogout ? 'red' : 'green' }}"
+          text="{{ showLoginLogout ? 'LOGOUT' : 'LOGIN' }}"
+          (btnClick)="toggleTask()"
+          routerLink="{{showLoginLogout ? '/login' : ''}}"
+        ></app-button>
+      </div>
+
+    </div>
+      
+      
+ 
+</div>
+<div class="header-container">
+  <h1>{{ title }}</h1>
+  
+  <i class="far fa-edit"></i>
+</div>
+<div class="img-portrait">
+
+  <i class="far fa-edit"></i>
+    
+    
+</div>

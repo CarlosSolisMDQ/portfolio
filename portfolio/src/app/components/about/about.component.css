@@ -1,0 +1,15 @@
+.about{
+    border: solid 1px black;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.about-texto{
+    margin-left: auto;
+    margin-right: 50%;
+    text-align: justify;
+    text-justify: inter-word;
+}
