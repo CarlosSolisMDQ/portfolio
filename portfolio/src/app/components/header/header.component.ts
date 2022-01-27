@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UIService } from 'src/app/services/UIService.service';
 import { Subscription } from 'rxjs';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
   selector: 'app-header',
@@ -13,12 +14,14 @@ export class HeaderComponent implements OnInit {
   showLoginLogout: boolean = false;
   subscription?: Subscription;
 
-  constructor(private uiService: UIService) { 
+  constructor(private uiService: UIService, private datosServicioPorfolio: PortfolioService) { 
     this.subscription = this.uiService.onToggle().subscribe((value) => this.showLoginLogout = value);
   }
 
   ngOnInit(): void {
+    this.datosServicioPorfolio.fetchData().subscribe(data => console.log(data));
   }
+
   toggleTask(){
     console.log("header toggleTask");
     this.uiService.toggleAddTask();

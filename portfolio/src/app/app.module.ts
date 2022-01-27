@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponentComponent } from './components/homePageComponent/homePageComponent.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     ButtonComponent,
     LoginComponent,
     
-    HomePageComponentComponent
+    HomePageComponentComponent,
+         FooterComponent
   ],
   imports: [
     BrowserModule,

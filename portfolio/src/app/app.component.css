@@ -1,5 +1,5 @@
 *{
-    margin: 20px;
+    margin: 10px;
     
    
     
@@ -8,8 +8,8 @@
 
 
 .container{
-     margin-left: 10em;
-    margin-right: 10em;
+     margin-left: auto;
+    margin-right: auto;
     
 }
 
@@ -17,3 +17,33 @@
     border: solid 1px rgb(0, 0, 0);
     border-radius: 10px;
 }
+
+
+
+  @media only screen and(max-width: 768px) and  (min-width: 1060px){
+    .container {
+        margin-left: 0em;
+       
+        margin-right: 0em;
+    }
+}
+    
+    @media only screen and(max-width: 575px) and  (min-width: 760px) {
+    .container {
+        margin-left: 0em;
+       
+        margin-right: 0em;
+    }
+  }
+
+  @media only screen and (max-width: 320px) and  (min-width: 560px) {
+  
+    .container {
+        margin-left: 0em;
+       
+        margin-right: 0em;
+    }
+
+    
+    
+  }

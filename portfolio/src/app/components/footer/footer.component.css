@@ -1,0 +1,16 @@
+.redes{
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+
+
+.redes>i:hover{
+    transition: 0.9s;
+    transform: rotate(20deg);
+    color: red;
+}

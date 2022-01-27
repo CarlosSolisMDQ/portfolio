@@ -5,7 +5,7 @@
     flex-direction: row;
 }
 
-.header-container>i{
+.erase-edit-icon{
     padding: 10px;
     margin-top: auto;
     margin-bottom: 0%;
@@ -16,9 +16,13 @@
     
     .btn-login{
     
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: auto;
+    margin-right: 2em;
         
 }
+
 
 
 
@@ -26,7 +30,7 @@
     width: 10em;
     height: 10em;
     background-color: brown;
-    margin-left: 5em;
+    margin-left: 2em;
     margin-top: -5em;
     background-image: url(../../../assets/imagencaraejemplo.jpeg);
     background-size: contain;
@@ -50,29 +54,7 @@
     color: white;
 }
 
-.redes{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 1em;
-    color: white;
-    display: flex;
-    flex-direction: row;
-}
 
-.redes>i{
-    margin-left: 10px;
-}
-
-.redes>.btn-login{
-    margin-left: 2em;
-}
-
-.redes>i:hover{
-    transition: 0.9s;
-    transform: rotate(20deg);
-    color: red;
-}
 
 .ap-logo>img{
     margin-top: auto;
@@ -96,3 +78,38 @@
     max-width: 100%;
     max-height: 100%;
 }
+
+@media only screen and (max-width: 500px) {
+  
+    .ap-logo{
+        height: 5em;
+        background-color: black;
+        display:  flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        color: white;
+    }
+    
+    
+    
+    .ap-logo>img{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 0em;
+        margin-right: 0em;
+    }
+    
+    .ap-logo>p {
+        display: none;
+    }
+    
+    
+    
+    .ap-logo>img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    
+    
+  }
