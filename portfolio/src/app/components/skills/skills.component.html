@@ -1,5 +1,5 @@
 
-<h2>skills works! <i class="fas fa-plus"></i></h2>
+<h2>skills works! <i *ngIf="usuarioAutenticado" class="fas fa-plus"></i></h2>
 
 <div *ngFor="let skill of skills">
     
@@ -7,7 +7,7 @@
     
     
     <p>{{skill.habilidad}}</p>
-<div class="erase-edit-icon">
+<div class="erase-edit-icon" *ngIf="usuarioAutenticado">
     
     <i class="far fa-trash-alt"></i>
     <i class="far fa-edit"></i>
