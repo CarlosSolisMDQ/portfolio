@@ -19,6 +19,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { InterceptorService } from './services/interceptor.service';
+import { AboutEditComponent } from './components/about-edit/about-edit.component';
+import { EducationEditComponent } from './components/education-edit/education-edit.component';
+import { ExperienceEditComponent } from './components/experience-edit/experience-edit.component';
+import { ProjectsEditComponent } from './components/projects-edit/projects-edit.component';
+import { SkillsEditComponent } from './components/skills-edit/skills-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import { InterceptorService } from './services/interceptor.service';
     LoginComponent,
     
     HomePageComponentComponent,
-         FooterComponent
+         FooterComponent,
+         AboutEditComponent,
+         EducationEditComponent,
+         ExperienceEditComponent,
+         ProjectsEditComponent,
+         SkillsEditComponent
   ],
   imports: [
     BrowserModule,

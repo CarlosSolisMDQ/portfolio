@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { UserService } from './user.service';
-@Injectable({
-  providedIn: 'root'
-})
+
+@Injectable()
 export class InterceptorService implements HttpInterceptor {
 
   constructor(private userService: UserService) { }
@@ -14,13 +13,13 @@ export class InterceptorService implements HttpInterceptor {
     var currentUser = this.userService.usuarioAutenticado;
 
     if(currentUser && currentUser.token){
-      req = req.clone({
-        setHeaders: {
-          Autorization: `Bearer ${currentUser.token}`
-        }
-      })
+      if(currentUser.token != null){
+        req = req.clone({ headers: req.headers.set('Authorization', 'Bearer ' + currentUser.token)  })
+      }
+      
     }
-    console.log("interceptor: " + JSON.stringify(currentUser))
+    console.log("interceptor req:" + JSON.stringify(req));
     return next.handle(req);
   }
 }
+export const interceptorProvider = [{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}];

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Observable, BehaviorSubject } from "rxjs";
 import { map } from "rxjs";
 
@@ -10,6 +10,8 @@ export class UserService {
 currentUserSubject: BehaviorSubject<any>
 
 userAutenticado: boolean;
+
+postId: any;
 
 
   constructor(private http: HttpClient) {
@@ -23,9 +25,9 @@ userAutenticado: boolean;
   }
 
   //esto usa una restAPI de pruebas en https://reqres.in/ para simular el login con las credenciales "email": "eve.holt@reqres.in",    "password": "cityslicka"
-
+//ya esta funcionando la autenticacion del heroku
   login(user: any): Observable<any> {
-    return this.http.post("https://reqres.in/api/login", user).pipe(map(data => {
+    return this.http.post("https://carlosportfolioap.herokuapp.com/auth/login", user).pipe(map(data => {
     sessionStorage.setItem('currentUser', JSON.stringify(data))
     this.currentUserSubject.next(data);
     
@@ -41,6 +43,23 @@ userAutenticado: boolean;
     this.userAutenticado = false;
   }
 
+  aboutEdit(aboutText: String): Observable<any>{
+    const about = aboutText
+    
+    //console.log("aboutText: " + aboutText);
+    return this.http.put<any>('https://carlosportfolioap.herokuapp.com/edit/about/2' + "?about=" + about, {});
+    
+    //despues de luchar como un enano logre hacer funcionar el put que me daba un 
+    //error de formato de req. Tengo que solucionar el tema de que hay que hacer un reload para
+    //ver los cambios.
+  }
+
+  experienceEdit(id: number, empresa: String, puesto: String, fechaInicio: number, fechaFin: number): Observable<any>{
+    console.log("pepe pepe");
+    
+    return this.http.put<any>(`https://carlosportfolioap.herokuapp.com/edit/experience/${id}` + "?empresa=" + empresa + "&puesto=" + puesto + "&fechaInicio=" + fechaInicio + "&fechaFin=" + fechaFin, {});
+  }
+
   get usuarioAutenticado() {
     return this.currentUserSubject.value;
   }
@@ -48,6 +67,8 @@ userAutenticado: boolean;
   get autenticado(){
     return this.userAutenticado;
   }
+
+  
 
   
 }

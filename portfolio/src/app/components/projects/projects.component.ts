@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Projects } from 'src/app/Projects';
-import { PROJECTS } from 'src/app/mock.projects';
+
 import { PortfolioService } from 'src/app/services/portfolio.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -17,7 +17,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private datosServicioPorfolio: PortfolioService, private userservice: UserService) { }
 
   ngOnInit(): void {
-    this.datosServicioPorfolio.fetchDataProjects().subscribe(data => data.projects.map((elem: any) => this.projects.push(elem)));
+    this.datosServicioPorfolio.fetchDataProjects().subscribe(data => data.map((elem: any) => this.projects.push(elem)));
     this.usuarioAutenticado = this.userservice.autenticado;
   }
 

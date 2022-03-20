@@ -1,0 +1,20 @@
+
+
+<div class="about">
+    <form [formGroup]="form" class="custom-form" method="put">
+      <h1>Edit About</h1>
+      <input
+        type="text"
+        formControlName="about"
+        class="formControl"
+        
+        name="about"
+        placeholder="About"
+        required="required"
+      />
+      
+      
+      <button type="submit" (click)="editAbout()">Editar</button>
+      <button routerLink="">Volver</button>
+    </form>
+  </div>

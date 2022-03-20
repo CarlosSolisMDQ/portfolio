@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Education} from "../../Education";
-import { EDUCATION } from '../../mock-education';
+
 import { PortfolioService } from 'src/app/services/portfolio.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -20,7 +20,7 @@ export class EducationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.datosServicioPorfolio.fetchDataEducation().subscribe(data => data.education.map((elem: any) => this.educations.push(elem)));
+    this.datosServicioPorfolio.fetchDataEducation().subscribe(data => data.map((elem: any) => this.educations.push(elem)));
     this.usuarioAutenticado = this.userservice.autenticado;
   }
 

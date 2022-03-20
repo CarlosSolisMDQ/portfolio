@@ -3,23 +3,16 @@
     <form [formGroup]="form" class="custom-form" method="post">
       <h1>Login</h1>
       <input
-        type="email"
-        formControlName="email"
+        
+        type="nombreUsuario"
+        formControlName="nombreUsuario"
         class="formControl"
-        [(ngModel)]="email"
-        name="email"
-        placeholder="Email"
+        [(ngModel)]="nombreUsuario"
+        name="nombreUsuario"
+        placeholder="User"
         required="required"
       />
-      <div *ngIf= "Email?.errors && Email?.touched">
-          <p *ngIf="Email?.hasError('required')" class="text-danger">
-                El email es requerido
-          </p>
-          <p *ngIf="Email?.hasError('email')" class="text-danger">
-                El formato del email debe ser valido
-          </p>
-
-      </div>
+      
       <input
         type="password"
         formControlName="password"

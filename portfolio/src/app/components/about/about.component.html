@@ -2,9 +2,9 @@
 <h2>about works!</h2>
 
 <div class="about"> 
-    <div class="about-texto">{{about}}</div>
+    <div class="about-texto">{{about[0].about}}</div>
     <div *ngIf="usuarioAutenticado"> 
-        <i class="far fa-edit"></i>
+        <i routerLink="/aboutEdit" class="far fa-edit"></i>
 
     </div> 
 </div>

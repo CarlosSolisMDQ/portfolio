@@ -2,6 +2,7 @@ export interface Experience {
     id?: number;
     empresa: String;
     puesto: String;
-    fecha: String
+    fechaInicio: number;
+    fechaFin: number;
     
 }

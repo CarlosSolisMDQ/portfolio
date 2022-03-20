@@ -4,10 +4,11 @@
 
     <p>{{experience.empresa}}</p>
     <p>{{experience.puesto}}</p>
-    <p>{{experience.fecha}}</p>
+    <p>{{experience.fechaInicio}} - {{experience.fechaFin}}</p>
+    
     <div class="erase-edit-icon" *ngIf="usuarioAutenticado">
 
-        <i class="far fa-trash-alt"></i>
-        <i class="far fa-edit"></i>
+        <a><i class="far fa-trash-alt"></i></a>
+        <a [routerLink]="['/experienceEdit', experience.id]"> <i class="far fa-edit"></i> </a>
     </div>
 </div>
