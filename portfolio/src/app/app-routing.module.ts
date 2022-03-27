@@ -9,12 +9,18 @@ import { LoginComponent } from './components/login/login.component';
 import {HomePageComponentComponent} from './components/homePageComponent/homePageComponent.component';
 import { AboutEditComponent } from './components/about-edit/about-edit.component';
 import {ExperienceEditComponent} from './components/experience-edit/experience-edit.component'
+import { EducationEditComponent } from './components/education-edit/education-edit.component';
+import { SkillsEditComponent } from './components/skills-edit/skills-edit.component'
+import { ProjectsEditComponent } from './components/projects-edit/projects-edit.component';
 
 const routes: Routes = [
   {path: 'experienceEdit/:id', component: ExperienceEditComponent},
   {path: '', component: HomePageComponentComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'aboutEdit', component: AboutEditComponent}
+  {path: 'aboutEdit', component: AboutEditComponent},
+  {path: 'educationEdit/:id', component: EducationEditComponent},
+  {path: 'skillEdit/:id', component: SkillsEditComponent},
+  {path: 'projectEdit/:id', component: ProjectsEditComponent}
 ];
 
 @NgModule({

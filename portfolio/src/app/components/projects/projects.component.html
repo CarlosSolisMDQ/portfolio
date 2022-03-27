@@ -12,12 +12,12 @@
 
     </div>
     
-    <div class="div3">
+    <div class="div3" style="background-image: url('{{project.imagen}}'); background-size: cover;">
        
     </div>
     <div class="erase-edit-icon" *ngIf="usuarioAutenticado">
         <i class="far fa-trash-alt"></i>
-        <i class="far fa-edit"></i>
+        <a [routerLink]="['/projectEdit', project.id]"> <i class="far fa-edit"></i> </a>
 
     </div>
 </div>

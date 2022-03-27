@@ -1,1 +1,40 @@
 <p>projects-edit works!</p>
+
+<div class="projectEdit">
+    <form [formGroup]="form" class="custom-form" method="put">
+      <h1>Edit skill</h1>
+      <input
+        type="text"
+        formControlName="nombre"
+        class="formControl"
+        
+        name="nombre"
+        placeholder="Nombre"
+        required="required"
+      />
+      
+      <input
+        type="text"
+        formControlName="descripcion"
+        class="formControl"
+        
+        name="descripcion"
+        placeholder="Descripcion"
+        required="required"
+      />
+
+      <input
+        type="text"
+        formControlName="imagenURL"
+        class="formControl"
+        
+        name="imagenURL"
+        placeholder="imagenURL"
+        required="required"
+      />
+
+      
+      <button type="submit" (click)="editProject()">Editar</button>
+      <button routerLink="">Volver</button>
+    </form>
+  </div>

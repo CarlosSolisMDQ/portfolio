@@ -10,6 +10,6 @@
     <div class="erase-edit-icon" *ngIf="usuarioAutenticado">
 
         <i class="far fa-trash-alt"></i>
-        <i class="far fa-edit"></i>
+        <a [routerLink]="['/educationEdit', education.id]"> <i class="far fa-edit"></i> </a>
     </div>
 </div>

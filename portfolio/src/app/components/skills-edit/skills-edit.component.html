@@ -1,1 +1,30 @@
 <p>skills-edit works!</p>
+
+<div class="skillEdit">
+    <form [formGroup]="form" class="custom-form" method="put">
+      <h1>Edit skill</h1>
+      <input
+        type="number"
+        formControlName="porcentaje"
+        class="formControl"
+        
+        name="porcentaje"
+        placeholder="Porcentaje"
+        required="required"
+      />
+      
+      <input
+        type="text"
+        formControlName="habilidad"
+        class="formControl"
+        
+        name="habilidad"
+        placeholder="Habilidad"
+        required="required"
+      />
+
+      
+      <button type="submit" (click)="editSkill()">Editar</button>
+      <button routerLink="">Volver</button>
+    </form>
+  </div>

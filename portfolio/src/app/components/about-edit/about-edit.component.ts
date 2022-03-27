@@ -39,13 +39,16 @@ export class AboutEditComponent implements OnInit {
 
       this.userService.aboutEdit(this.form.value.about).subscribe(data => console.log("aboutEdit"))
       
-      this.redirectTo('');
+      //this.redirectTo('');
+
+      //hacer que la edicion despliegue una alerta y que ponga un boton de volver
    }
 
    //me cansé de buscar un buen metodo para reiniciar el componente alimentado por la 
    //edicion haciando un reaload y una nueva peticion, al final aplico la vieja confiable de 
    //hacer un reload a la url y santo remedio.
 
+   //eliminar esto y poner una alerta
    redirectTo(uri:string){
     this.router.navigate([uri])
   .then(() => {

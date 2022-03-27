@@ -28,7 +28,7 @@ div {
 .div1 { grid-area: 1 / 1 / 1 / 1; }
 .div2 { grid-area: 2 / 1 / 2 / 1; }
 .div3 { 
-    background-image: url(../../../assets/lobacheva-ina-_x7ytvBOzs8-unsplash.jpg);
+    
     background-size: contain;
     grid-area: 1 / 2 / 3 / 2; 
 }
