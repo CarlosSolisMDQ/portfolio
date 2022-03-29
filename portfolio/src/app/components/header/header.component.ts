@@ -27,8 +27,7 @@ export class HeaderComponent implements OnInit {
   toggleTask(){
     console.log("header toggleTask");
     this.uiService.toggleAddTask();
-    
-    
+    //window.location.reload();
   }
 
   logOutButton(){

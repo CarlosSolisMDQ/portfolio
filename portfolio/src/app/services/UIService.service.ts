@@ -16,8 +16,7 @@ export class UIService {
     console.log(this.showLoginLogout);
     this.showLoginLogout = !this.showLoginLogout;    
     this.subject.next(this.showLoginLogout);
-    
-    
+      
   }
 
   onToggle(): Observable<any>{

@@ -1,7 +1,10 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from "@angular/common/http";
-import { Observable, BehaviorSubject } from "rxjs";
+import { Observable, BehaviorSubject, Subject, of, Subscription } from "rxjs";
 import { map } from "rxjs";
+import { UIService } from "./UIService.service";
+
+import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: "root"
@@ -9,12 +12,15 @@ import { map } from "rxjs";
 export class UserService {
 currentUserSubject: BehaviorSubject<any>
 
+
+
 userAutenticado: boolean;
 
 postId: any;
+tokenSubscription = new Subscription()
 
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router, private uiService: UIService) {
     
     if (sessionStorage.getItem('currentUser') == null){
       this.userAutenticado = false;
@@ -26,22 +32,30 @@ postId: any;
 
   
 //ya esta funcionando la autenticacion del heroku
+
+//hay que agregar el logout por expiracion del token
+
+
   login(user: any): Observable<any> {
     return this.http.post("https://carlosportfolioap.herokuapp.com/auth/login", user).pipe(map(data => {
     sessionStorage.setItem('currentUser', JSON.stringify(data))
     this.currentUserSubject.next(data);
-    
     this.userAutenticado = true;
+    
     return data;
     }));
   }
 
   logOut(){
-    window.location.reload();
+    
     sessionStorage.clear();
-    sessionStorage.removeItem('currentUser');
+    //sessionStorage.removeItem('currentUser');
     this.userAutenticado = false;
+    this.uiService.toggleAddTask();
+    window.location.reload();
   }
+
+  
 
   aboutEdit(aboutText: String): Observable<any>{
     return this.http.put<any>('https://carlosportfolioap.herokuapp.com/edit/about/2' + "?about=" + aboutText, {});
