@@ -28,8 +28,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.datosServicioPorfolio.fetchHeaderImages().subscribe(data => this.portada = data[0].portada);
     this.datosServicioPorfolio.fetchHeaderImages().subscribe(data => this.foto = data[0].foto);
-
-    
+  
     this.usuarioAutenticado = this.userservice.autenticado;
   }
 
