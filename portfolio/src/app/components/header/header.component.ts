@@ -3,6 +3,7 @@ import { UIService } from 'src/app/services/UIService.service';
 import { Subscription } from 'rxjs';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 import { UserService } from 'src/app/services/user.service';
+import { HeaderImages } from 'src/app/HeaderImages'
 
 @Component({
   selector: 'app-header',
@@ -15,26 +16,35 @@ export class HeaderComponent implements OnInit {
   showLoginLogout: boolean = false;
   subscription?: Subscription;
   usuarioAutenticado: boolean = false;
+  
+  portada: String = "";
+  foto: String = "";
+
+
   constructor(private uiService: UIService, private datosServicioPorfolio: PortfolioService, private userservice: UserService) { 
     this.subscription = this.uiService.onToggle().subscribe((value) => this.showLoginLogout = value);
   }
 
   ngOnInit(): void {
-    this.datosServicioPorfolio.fetchData().subscribe(data => console.log(data));
+    this.datosServicioPorfolio.fetchHeaderImages().subscribe(data => this.portada = data[0].portada);
+    this.datosServicioPorfolio.fetchHeaderImages().subscribe(data => this.foto = data[0].foto);
+
+    
     this.usuarioAutenticado = this.userservice.autenticado;
   }
 
   toggleTask(){
     console.log("header toggleTask");
     this.uiService.toggleAddTask();
-    //window.location.reload();
+    
   }
 
   logOutButton(){
    
-      this.userservice.logOut();
+    this.userservice.logOut();
      
   }
+
 
   
 

@@ -15,7 +15,7 @@ export class PortfolioService {
     return this.http.get('./assets/mockJson/prueba.json');
   }
 
-  //este conjunto de metodos consulta los json de mock, voy a mantener metodos y consultas individuales
+  //consultas a los endpoint sin securizar
 
   fetchDataEducation():Observable<any>{
     return this.http.get('https://carlosportfolioap.herokuapp.com/education');
@@ -35,5 +35,9 @@ export class PortfolioService {
 
   fetchAbout():Observable<any>{
     return this.http.get('https://carlosportfolioap.herokuapp.com/about');
+  }
+
+  fetchHeaderImages(): Observable<any>{
+    return this.http.get('https://carlosportfolioap.herokuapp.com/images');
   }
 }
