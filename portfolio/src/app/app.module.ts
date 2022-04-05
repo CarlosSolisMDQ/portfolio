@@ -24,6 +24,7 @@ import { EducationEditComponent } from './components/education-edit/education-ed
 import { ExperienceEditComponent } from './components/experience-edit/experience-edit.component';
 import { ProjectsEditComponent } from './components/projects-edit/projects-edit.component';
 import { SkillsEditComponent } from './components/skills-edit/skills-edit.component';
+import { HeaderPortadaEditComponent } from './components/header-portada-edit/header-portada-edit.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { SkillsEditComponent } from './components/skills-edit/skills-edit.compon
          EducationEditComponent,
          ExperienceEditComponent,
          ProjectsEditComponent,
-         SkillsEditComponent
+         SkillsEditComponent,
+         HeaderPortadaEditComponent
   ],
   imports: [
     BrowserModule,

@@ -25,14 +25,15 @@
   <h1>{{ title }}</h1>
   
   <div class="erase-edit-icon" >
-    <i *ngIf="usuarioAutenticado" class="far fa-edit"></i>
-
+    
+    <a routerLink="/editImages"> <i *ngIf="usuarioAutenticado" class="far fa-edit"></i> </a>
   </div>
 </div>
 <div class="img-portrait" style="background-image: url('{{foto}}'); background-size: cover;">
   <div class="erase-edit-icon">
 
-    <i *ngIf="usuarioAutenticado" class="far fa-edit"></i>
+    <a routerLink="/editImages"> <i *ngIf="usuarioAutenticado" class="far fa-edit"></i> </a>
+    
 
   </div>
     

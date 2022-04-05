@@ -82,6 +82,10 @@ tokenSubscription = new Subscription()
     return this.http.put<any>(`https://carlosportfolioap.herokuapp.com/edit/skills/${id}` + "?porcentaje=" + porcentaje + "&habilidad=" + habilidad, {});
   }
 
+  imagesEdit(id: number, portada: String, foto: String): Observable<any>{
+    return this.http.put<any>(`https://carlosportfolioap.herokuapp.com/edit/skills/${id}` + "?portada=" + portada + "&foto=" + foto, {});
+  }
+
   get usuarioAutenticado() {
     return this.currentUserSubject.value;
   }

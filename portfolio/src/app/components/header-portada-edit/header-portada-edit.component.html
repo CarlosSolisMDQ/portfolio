@@ -1,0 +1,30 @@
+<p>header-portada-edit works!</p>
+
+
+<div class="images-edit">
+    <form [formGroup]="form" class="custom-form" method="put">
+      <h1>Edit About</h1>
+      <input
+        type="text"
+        formControlName="portada"
+        class="formControl"
+        
+        name="portada"
+        placeholder="Portada url"
+        required="required"
+      />
+      <input
+        type="text"
+        formControlName="foto"
+        class="formControl"
+        
+        name="foto"
+        placeholder="Foto url"
+        required="required"
+      />
+      
+      <button type="submit" (click)="editImagesHeader()">Editar</button>
+      <button routerLink="">Volver</button>
+    </form>
+  </div>
+
