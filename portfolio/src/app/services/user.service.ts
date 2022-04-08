@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from "@angular/common/http";
 import { Observable, BehaviorSubject, Subject, of, Subscription } from "rxjs";
 import { map } from "rxjs";
 import { UIService } from "./UIService.service";
-
+import { Experience } from "../Experience";
 import { Router } from "@angular/router";
 
 @Injectable({
@@ -83,7 +83,12 @@ tokenSubscription = new Subscription()
   }
 
   imagesEdit(id: number, portada: String, foto: String): Observable<any>{
-    return this.http.put<any>(`https://carlosportfolioap.herokuapp.com/edit/skills/${id}` + "?portada=" + portada + "&foto=" + foto, {});
+    return this.http.put<any>(`https://carlosportfolioap.herokuapp.com/edit/images/${id}` + "?portada=" + portada + "&foto=" + foto, {});
+  }
+
+  deleteExperience(id: number): Observable<Experience[]>{
+    //console.log("delete experience + id" + id)
+    return this.http.delete<Experience[]>(`https://carlosportfolioap.herokuapp.com/experience/borrar/${id}`);
   }
 
   get usuarioAutenticado() {

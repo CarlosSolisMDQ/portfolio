@@ -45,7 +45,8 @@ import { HeaderPortadaEditComponent } from './components/header-portada-edit/hea
          ExperienceEditComponent,
          ProjectsEditComponent,
          SkillsEditComponent,
-         HeaderPortadaEditComponent
+         HeaderPortadaEditComponent,
+         
   ],
   imports: [
     BrowserModule,
