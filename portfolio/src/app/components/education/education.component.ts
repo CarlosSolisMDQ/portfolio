@@ -20,8 +20,12 @@ export class EducationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.datosServicioPorfolio.fetchDataEducation().subscribe(data => data.map((elem: any) => this.educations.push(elem)));
+    this.datosServicioPorfolio.fetchDataEducation().subscribe(data => this.educations = data);
     this.usuarioAutenticado = this.userservice.autenticado;
+  }
+
+  educationDelete(education:Education) {
+    this.userservice.deleteEducation(education.id!).subscribe(() => this.educations = this.educations.filter(elem => elem.id !== education.id));
   }
 
 }

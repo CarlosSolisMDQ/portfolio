@@ -9,7 +9,7 @@
     <p>{{skill.habilidad}}</p>
 <div class="erase-edit-icon" *ngIf="usuarioAutenticado">
     
-    <i class="far fa-trash-alt"></i>
+    <a (click)="skillDelete(skill)"><i class="far fa-trash-alt"></i></a>
     <a [routerLink]="['/skillEdit', skill.id]"> <i class="far fa-edit"></i> </a>
 </div>
 

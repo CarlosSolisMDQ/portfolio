@@ -16,7 +16,7 @@
        
     </div>
     <div class="erase-edit-icon" *ngIf="usuarioAutenticado">
-        <i class="far fa-trash-alt"></i>
+        <a (click)="projectDelete(project)"><i class="far fa-trash-alt"></i></a>
         <a [routerLink]="['/projectEdit', project.id]"> <i class="far fa-edit"></i> </a>
 
     </div>

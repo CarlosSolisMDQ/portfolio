@@ -17,8 +17,12 @@ export class ProjectsComponent implements OnInit {
   constructor(private datosServicioPorfolio: PortfolioService, private userservice: UserService) { }
 
   ngOnInit(): void {
-    this.datosServicioPorfolio.fetchDataProjects().subscribe(data => data.map((elem: any) => this.projects.push(elem)));
+    this.datosServicioPorfolio.fetchDataProjects().subscribe(data => this.projects = data);
     this.usuarioAutenticado = this.userservice.autenticado;
+  }
+
+  projectDelete(project: Projects){
+    this.userservice.deleteProject(project.id!).subscribe(() => this.projects = this.projects.filter(elem => elem.id !== project.id));
   }
 
 }

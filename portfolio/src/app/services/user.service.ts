@@ -5,6 +5,9 @@ import { map } from "rxjs";
 import { UIService } from "./UIService.service";
 import { Experience } from "../Experience";
 import { Router } from "@angular/router";
+import { Projects } from "../Projects";
+import { Skill } from "../Skill";
+import { Education } from "../Education";
 
 @Injectable({
   providedIn: "root"
@@ -89,6 +92,18 @@ tokenSubscription = new Subscription()
   deleteExperience(id: number): Observable<Experience[]>{
     //console.log("delete experience + id" + id)
     return this.http.delete<Experience[]>(`https://carlosportfolioap.herokuapp.com/experience/borrar/${id}`);
+  }
+
+  deleteProject(id: number): Observable<Projects[]>{
+    return this.http.delete<Projects[]>(`https://carlosportfolioap.herokuapp.com/project/borrar/${id}`);
+  }
+
+  deleteSkill(id: number): Observable<Skill[]>{
+    return this.http.delete<Skill[]>(`https://carlosportfolioap.herokuapp.com/skill/borrar/${id}`);
+  }
+
+  deleteEducation(id: number): Observable<Education[]>{
+    return this.http.delete<Education[]>(`https://carlosportfolioap.herokuapp.com/education/borrar/${id}`)
   }
 
   get usuarioAutenticado() {

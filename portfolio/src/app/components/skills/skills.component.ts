@@ -18,8 +18,12 @@ export class SkillsComponent implements OnInit {
   constructor(private datosServicioPorfolio: PortfolioService, private userservice: UserService) { }
 
   ngOnInit(): void {
-    this.datosServicioPorfolio.fetchDataSkills().subscribe(data => data.map((elem: any) => this.skills.push(elem)));
+    this.datosServicioPorfolio.fetchDataSkills().subscribe(data => this.skills = data);
     this.usuarioAutenticado = this.userservice.autenticado;
+  }
+
+  skillDelete(skill: Skill){
+    this.userservice.deleteSkill(skill.id!).subscribe(() => this.skills = this.skills.filter(elem => elem.id !== skill.id))
   }
 
 }
