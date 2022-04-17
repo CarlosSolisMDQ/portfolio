@@ -34,9 +34,9 @@ tokenSubscription = new Subscription()
   }
 
   
-//ya esta funcionando la autenticacion del heroku
 
-//hay que agregar el logout por expiracion del token
+
+
 
 
   login(user: any): Observable<any> {
@@ -104,6 +104,22 @@ tokenSubscription = new Subscription()
 
   deleteEducation(id: number): Observable<Education[]>{
     return this.http.delete<Education[]>(`https://carlosportfolioap.herokuapp.com/education/borrar/${id}`)
+  }
+
+  educationAdd(escuela: String, carrera: String, fechaInicio: number, fechaFin: number): Observable<any>{
+    return this.http.post<Education[]>(`https://carlosportfolioap.herokuapp.com/education/crear`, {"escuela": escuela, "carrera": carrera, "fechaInicio": fechaInicio, "fechaFin": fechaFin});
+  }
+
+  experienceAdd(empresa: String, puesto: String, fechaInicio: number, fechaFin: number): Observable<any>{
+    return this.http.post<Experience[]>(`https://carlosportfolioap.herokuapp.com/experience/crear`, {"empresa": empresa, "puesto": puesto, "fechaInicio": fechaInicio, "fechaFin": fechaFin});
+  }
+
+  projectAdd(nombre: String, descripcion: String, imageURL: string): Observable<any>{
+    return this.http.post<Projects[]>(`https://carlosportfolioap.herokuapp.com/project/crear`, {"nombre": nombre, "descripcion": descripcion, "imagen": imageURL});
+  }
+
+  skillAdd(porcentaje: number, habilidad: String): Observable<any>{
+    return this.http.post<Skill[]>(`https://carlosportfolioap.herokuapp.com/skill/crear`, {"porcentaje": porcentaje, "habilidad": habilidad});
   }
 
   get usuarioAutenticado() {

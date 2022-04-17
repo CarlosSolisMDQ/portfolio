@@ -1,0 +1,50 @@
+<p>education-add works!</p>
+
+
+<div class="educationEdit">
+    <form [formGroup]="form" class="custom-form" method="put">
+      <h1>Add education</h1>
+      <input
+        type="text"
+        formControlName="escuela"
+        class="formControl"
+        
+        name="escuela"
+        placeholder="Escuela"
+        required="required"
+      />
+      
+      <input
+        type="text"
+        formControlName="carrera"
+        class="formControl"
+        
+        name="carrera"
+        placeholder="Carrera"
+        required="required"
+      />
+
+      <input
+        type="number"
+        formControlName="fechaInicio"
+        class="formControl"
+        
+        name="fechaInicio"
+        placeholder="Inicio"
+        required="required"
+      />
+
+      <input
+        type="number"
+        formControlName="fechaFin"
+        class="formControl"
+        
+        name="fechaFinal"
+        placeholder="final"
+        required="required"
+      />
+      
+      <button type="submit" (click)="addEducation()">Add</button>
+      <button routerLink="">Volver</button>
+    </form>
+  </div>

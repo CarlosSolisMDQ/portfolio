@@ -1,4 +1,4 @@
-<h2>Education Works! <i *ngIf="usuarioAutenticado" class="fas fa-plus"></i></h2>
+<h2>Education Works! <a [routerLink]="['/addEducation']"> <i *ngIf="usuarioAutenticado"  class="fas fa-plus"></i> </a></h2>
 
 <div *ngFor= "let education of educations">
     

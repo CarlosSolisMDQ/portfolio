@@ -1,8 +1,9 @@
-<p>projects-edit works!</p>
+<p>projects-add works!</p>
+
 
 <div class="projectEdit">
     <form [formGroup]="form" class="custom-form" method="put">
-      <h1>Edit Project</h1>
+      <h1>Add Project</h1>
       <input
         type="text"
         formControlName="nombre"
@@ -34,7 +35,7 @@
       />
 
       
-      <button type="submit" (click)="editProject()">Editar</button>
+      <button type="submit" (click)="addProject()">Editar</button>
       <button routerLink="">Volver</button>
     </form>
   </div>

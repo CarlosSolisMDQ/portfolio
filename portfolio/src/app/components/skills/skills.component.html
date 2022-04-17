@@ -1,5 +1,5 @@
 
-<h2>skills works! <i *ngIf="usuarioAutenticado" class="fas fa-plus"></i></h2>
+<h2>skills works! <a [routerLink]="['addSkills']"><i *ngIf="usuarioAutenticado" class="fas fa-plus"></i></a></h2>
 
 <div *ngFor="let skill of skills">
     

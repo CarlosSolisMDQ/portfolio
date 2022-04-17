@@ -25,6 +25,10 @@ import { ExperienceEditComponent } from './components/experience-edit/experience
 import { ProjectsEditComponent } from './components/projects-edit/projects-edit.component';
 import { SkillsEditComponent } from './components/skills-edit/skills-edit.component';
 import { HeaderPortadaEditComponent } from './components/header-portada-edit/header-portada-edit.component';
+import { EducationAddComponent } from './components/education-add/education-add.component';
+import { ExperienceAddComponent } from './components/experience-add/experience-add.component';
+import { ProjectsAddComponent } from './components/projects-add/projects-add.component';
+import { SkillsAddComponent } from './components/skills-add/skills-add.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,10 @@ import { HeaderPortadaEditComponent } from './components/header-portada-edit/hea
          ProjectsEditComponent,
          SkillsEditComponent,
          HeaderPortadaEditComponent,
+         EducationAddComponent,
+         ExperienceAddComponent,
+         ProjectsAddComponent,
+         SkillsAddComponent,
          
   ],
   imports: [
