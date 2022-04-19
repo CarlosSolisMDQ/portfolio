@@ -41,7 +41,7 @@ export class HeaderPortadaEditComponent implements OnInit {
     //input en blanco me tira un null y devolverlo a string vacio que es lo que pide el backend 
 
 
-    this.userService.imagesEdit(this.id, this.form.value.portada, this.form.value.foto).subscribe(data => console.log("imagesEdit"))
+    this.userService.imagesEdit(this.id, this.form.value.portada, this.form.value.foto).subscribe(()=> this.router.navigate([""]));
   }
 
 }

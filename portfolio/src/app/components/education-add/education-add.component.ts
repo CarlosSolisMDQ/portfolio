@@ -29,7 +29,7 @@ export class EducationAddComponent implements OnInit {
   }
 
   addEducation(){
-    this.userService.educationAdd(this.form.value.escuela, this.form.value.carrera, this.form.value.fechaInicio, this.form.value.fechaFin).subscribe(() => alert("Success"));
+    this.userService.educationAdd(this.form.value.escuela, this.form.value.carrera, this.form.value.fechaInicio, this.form.value.fechaFin).subscribe(()=> this.router.navigate([""]));
   }
 
 }

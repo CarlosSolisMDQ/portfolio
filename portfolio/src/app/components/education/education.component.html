@@ -1,15 +1,19 @@
-<h2>Education Works! <a [routerLink]="['/addEducation']"> <i *ngIf="usuarioAutenticado"  class="fas fa-plus"></i> </a></h2>
+<h2>Educación: <a [routerLink]="['/addEducation']"> <i *ngIf="usuarioAutenticado"  class="fas fa-plus"></i> </a></h2>
 
 <div *ngFor= "let education of educations">
     
-    
-    <p>{{education.escuela}}</p>
-    <p>{{education.carrera}}</p>
-    <p>{{education.fechaInicio}} - {{education.fechaFin}}</p>
-    
-    <div class="erase-edit-icon" *ngIf="usuarioAutenticado">
+    <div  class="item">
 
-        <a (click)="educationDelete(education)"><i class="far fa-trash-alt"></i></a>
-        <a [routerLink]="['/educationEdit', education.id]"> <i class="far fa-edit"></i> </a>
+        <p>{{education.escuela}}</p>
+        <p>{{education.carrera}}</p>
+        <p>{{education.fechaInicio}} - {{education.fechaFin}}</p>
+        
+        <div class="erase-edit-icon" *ngIf="usuarioAutenticado">
+
+            <a (click)="educationDelete(education)"><i class="far fa-trash-alt"></i></a>
+            <a [routerLink]="['/educationEdit', education.id]"> <i class="far fa-edit"></i> </a>
+        </div>
     </div>
+    
+    
 </div>

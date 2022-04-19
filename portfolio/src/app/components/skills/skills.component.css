@@ -1,5 +1,10 @@
-div{
+.item {
     border: solid 1px black;
+    padding-top: 15px;
+    
+}
+
+div {
     padding: 5px;
     border-radius: 5px;
     display: flex;
@@ -11,4 +16,14 @@ progress {
     height: 2em;
     width: 50%;
 
+}
+
+i {
+    cursor: pointer;
+    color: blue;
+
+}
+
+p {
+    font-weight: bold;
 }

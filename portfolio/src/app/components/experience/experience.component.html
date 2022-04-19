@@ -1,7 +1,8 @@
-<h2>experience works! <a [routerLink]="['/addExperience']"><i *ngIf="usuarioAutenticado" class="fas fa-plus"></i></a></h2>
+<h2>Experiencias laborales: <a [routerLink]="['/addExperience']"><i *ngIf="usuarioAutenticado" class="fas fa-plus"></i></a></h2>
 
-<div *ngFor="let experience of experiences">
-    
+<div  *ngFor="let experience of experiences">
+   <div class="item">
+
     <p>{{experience.empresa}}</p>
     <p>{{experience.puesto}}</p>
     <p>{{experience.fechaInicio}} - {{experience.fechaFin}}</p>
@@ -11,4 +12,6 @@
         <a (click)="experienceDelete(experience)"><i class="far fa-trash-alt"></i></a>
         <a [routerLink]="['/experienceEdit', experience.id]"> <i class="far fa-edit"></i> </a>
     </div>
+   </div> 
+    
 </div>

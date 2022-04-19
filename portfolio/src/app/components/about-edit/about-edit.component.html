@@ -12,7 +12,9 @@
         placeholder="About"
         required="required"
       />
-      
+      <div *ngIf="about.errors?.maxlength"> 
+        <p>No ingresar mas de 188 caracteres, tampoco es para relamerse tanto.</p>
+      </div> 
       
       <button type="submit" (click)="editAbout()">Editar</button>
       <button routerLink="">Volver</button>

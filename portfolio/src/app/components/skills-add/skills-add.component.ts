@@ -27,7 +27,7 @@ export class SkillsAddComponent implements OnInit {
   }
 
   addSkill(){
-    this.userService.skillAdd(this.form.value.porcentaje, this.form.value.habilidad).subscribe(() => alert('Success'));
+    this.userService.skillAdd(this.form.value.porcentaje, this.form.value.habilidad).subscribe(()=> this.router.navigate([""]));
   }
 
 }

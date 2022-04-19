@@ -1,16 +1,19 @@
 
-<h2>skills works! <a [routerLink]="['addSkills']"><i *ngIf="usuarioAutenticado" class="fas fa-plus"></i></a></h2>
+<h2>Habilidades/skills: <a [routerLink]="['addSkills']"><i *ngIf="usuarioAutenticado" class="fas fa-plus"></i></a></h2>
 
 <div *ngFor="let skill of skills">
     
-    <progress id="porcentaje-bar" max="100" value={{skill.porcentaje}}> {{skill.porcentaje}} </progress>
-    
-    
-    <p>{{skill.habilidad}}</p>
-<div class="erase-edit-icon" *ngIf="usuarioAutenticado">
-    
-    <a (click)="skillDelete(skill)"><i class="far fa-trash-alt"></i></a>
-    <a [routerLink]="['/skillEdit', skill.id]"> <i class="far fa-edit"></i> </a>
-</div>
 
+<div class="item">
+
+        <progress id="porcentaje-bar" max="100" value={{skill.porcentaje}}> {{skill.porcentaje}} </progress>
+        
+        
+        <p>{{skill.habilidad}}</p>
+    <div class="erase-edit-icon" *ngIf="usuarioAutenticado">
+        
+        <a (click)="skillDelete(skill)"><i class="far fa-trash-alt"></i></a>
+        <a [routerLink]="['/skillEdit', skill.id]"> <i class="far fa-edit"></i> </a>
+    </div>
+</div>
 </div>

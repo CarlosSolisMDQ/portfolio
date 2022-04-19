@@ -90,7 +90,7 @@ tokenSubscription = new Subscription()
   }
 
   deleteExperience(id: number): Observable<Experience[]>{
-    //console.log("delete experience + id" + id)
+    
     return this.http.delete<Experience[]>(`https://carlosportfolioap.herokuapp.com/experience/borrar/${id}`);
   }
 

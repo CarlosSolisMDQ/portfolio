@@ -12,7 +12,7 @@ import { HeaderImages } from 'src/app/HeaderImages'
 })
 export class HeaderComponent implements OnInit {
   
-  title: String = "Portfolio";
+  title: String = "";
   showLoginLogout: boolean = false;
   subscription?: Subscription;
   usuarioAutenticado: boolean = false;

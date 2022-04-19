@@ -1,8 +1,23 @@
-div{
+.item {
+    padding-top: 15px;
     border: solid 1px black;
+}
+
+div{
+    
+    
     padding: 5px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+i {
+    cursor: pointer;
+    color: blue;
+}
+
+p {
+    font-weight: bold;
 }

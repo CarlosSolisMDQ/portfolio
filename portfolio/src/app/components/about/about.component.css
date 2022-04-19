@@ -9,7 +9,14 @@
 
 .about-texto{
     margin-left: auto;
-    margin-right: 0%;
+    margin-right: auto;
     text-align: justify;
     text-justify: inter-word;
+    word-break:break-all;
+}
+
+i {
+    cursor: pointer;
+    color: blue;
+    padding: 5px;
 }

@@ -43,7 +43,7 @@ export class ProjectsEditComponent implements OnInit {
   }
 
   editProject(){
-    this.userService.projectEdit(this.id, this.form.value.nombre, this.form.value.descripcion, this.form.value.imagenURL).subscribe(data => console.log("projectEdit"));
+    this.userService.projectEdit(this.id, this.form.value.nombre, this.form.value.descripcion, this.form.value.imagenURL).subscribe(()=> this.router.navigate([""]));
   }
 
 }

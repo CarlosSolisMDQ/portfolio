@@ -30,7 +30,7 @@ export class InterceptorService implements HttpInterceptor {
     //y usarlo para desloguear el usuario por expiracion del token
     //alea iacta est.
 
-
+    //este console log fue creado para verificar las peticiones que pasaban por el interceptor
     console.log("interceptor req:" + JSON.stringify(req));
     return next.handle(req).pipe(
       catchError(

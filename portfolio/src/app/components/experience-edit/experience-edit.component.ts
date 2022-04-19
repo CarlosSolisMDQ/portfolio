@@ -55,14 +55,12 @@ export class ExperienceEditComponent implements OnInit {
   public editExperience(){
       console.log("edit----experience " + this.form.value.empresa);
 
-      this.userService.experienceEdit(this.id, this.form.value.empresa, this.form.value.puesto, this.form.value.fechaInicio, this.form.value.fechaFin).subscribe(data => console.log("experienceEdit"))
-      //perdí todo un capitulo de downton abbey con un error en esta peticion y era por que me olvide de invocar el form
+      this.userService.experienceEdit(this.id, this.form.value.empresa, this.form.value.puesto, this.form.value.fechaInicio, this.form.value.fechaFin).subscribe(()=> this.router.navigate([""]))
       
-      //this.redirectTo('');
-
-      //hacer que la edicion despliegue una alerta y que ponga un boton de volver
 
   }
+
+  //esta funcion quedó sin uso
 
   redirectTo(uri:string){
     this.router.navigate([uri])

@@ -28,6 +28,6 @@ export class ProjectsAddComponent implements OnInit {
   }
 
   addProject(){
-    this.userService.projectAdd(this.form.value.nombre, this.form.value.descripcion, this.form.value.imagenURL).subscribe(() => alert("Project added"));
+    this.userService.projectAdd(this.form.value.nombre, this.form.value.descripcion, this.form.value.imagenURL).subscribe(()=> this.router.navigate([""]));
   }
 }

@@ -1,24 +1,28 @@
-<h2>projects works! <a [routerLink]="['/addProjects']"><i *ngIf="usuarioAutenticado" class="fas fa-plus"></i></a></h2>
+<h2>Proyectos: <a [routerLink]="['/addProjects']"><i *ngIf="usuarioAutenticado" class="fas fa-plus"></i></a></h2>
 
 <div class="projects">
 
 <div class="project-container" *ngFor="let project of projects">
-    <div class="div1">
-        <p>{{project.nombre}}</p>
-
-    </div>
-    <div class="div2">
-        <p>{{project.descripcion}}</p>
-
-    </div>
     
-    <div class="div3" style="background-image: url('{{project.imagen}}'); background-size: cover;">
-       
-    </div>
-    <div class="erase-edit-icon" *ngIf="usuarioAutenticado">
-        <a (click)="projectDelete(project)"><i class="far fa-trash-alt"></i></a>
-        <a [routerLink]="['/projectEdit', project.id]"> <i class="far fa-edit"></i> </a>
+    
+   <div class="item">
+        <div class="div1">
+            <p>{{project.nombre}}</p>
 
+        </div>
+        <div class="div2">
+            <p>{{project.descripcion}}</p>
+
+        </div>
+        
+        <div class="div3" style="background-image: url('{{project.imagen}}'); background-size: cover;">
+        
+        </div>
+        <div class="erase-edit-icon" *ngIf="usuarioAutenticado">
+            <a (click)="projectDelete(project)"><i class="far fa-trash-alt"></i></a>
+            <a [routerLink]="['/projectEdit', project.id]"> <i class="far fa-edit"></i> </a>
+
+        </div>
     </div>
 </div>
 

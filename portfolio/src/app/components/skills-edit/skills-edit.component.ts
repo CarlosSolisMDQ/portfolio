@@ -40,7 +40,7 @@ export class SkillsEditComponent implements OnInit {
   editSkill(){
 
     console.log("skillEdit: " + this.form.value.porcentaje);
-    this.userService.skillEdit(this.id, this.form.value.porcentaje, this.form.value.habilidad).subscribe(data => console.log("skillEdit"));
+    this.userService.skillEdit(this.id, this.form.value.porcentaje, this.form.value.habilidad).subscribe(()=> this.router.navigate([""]));
 
   }
 

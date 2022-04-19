@@ -28,7 +28,7 @@ export class ExperienceAddComponent implements OnInit {
   }
 
   addExperience(){
-    this.userService.experienceAdd(this.form.value.empresa, this.form.value.puesto, this.form.value.fechaInicio, this.form.value.fechaFin).subscribe(() => alert("Success"));
+    this.userService.experienceAdd(this.form.value.empresa, this.form.value.puesto, this.form.value.fechaInicio, this.form.value.fechaFin).subscribe(()=> this.router.navigate([""]));
   }
 
 }

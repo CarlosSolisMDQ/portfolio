@@ -33,7 +33,7 @@ export class EducationEditComponent implements OnInit {
   public editEducation(){
     console.log("edit----education " + this.form.value.escuela);
 
-    this.userService.educationEdit(this.id, this.form.value.escuela, this.form.value.carrera, this.form.value.fechaInicio, this.form.value.fechaFin).subscribe(data => console.log("educationEdit"))
+    this.userService.educationEdit(this.id, this.form.value.escuela, this.form.value.carrera, this.form.value.fechaInicio, this.form.value.fechaFin).subscribe(()=> this.router.navigate([""]));
     
     //this.router.navigate(['']);
 
