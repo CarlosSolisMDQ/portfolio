@@ -4,10 +4,10 @@
 
 <div class="project-container" *ngFor="let project of projects">
     
-    
+    <!-- voy a transformar el nombre del proyecto en link para poner la direccion viva de proyectos online -->
    <div class="item">
         <div class="div1">
-            <p>{{project.nombre}}</p>
+            <a href="{{project.nombre}}" target="_blank">{{project.nombre}}</a>
 
         </div>
         <div class="div2">

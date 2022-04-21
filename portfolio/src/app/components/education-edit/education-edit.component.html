@@ -1,9 +1,9 @@
-<p>education-edit works!</p>
+
 
 <div class="educationEdit">
     <form [formGroup]="form" class="custom-form" method="put">
       <h1>Edit education</h1>
-      <input
+      <textarea
         type="text"
         formControlName="escuela"
         class="formControl"
@@ -11,9 +11,9 @@
         name="escuela"
         placeholder="Escuela"
         required="required"
-      />
       
-      <input
+      ></textarea>
+      <textarea
         type="text"
         formControlName="carrera"
         class="formControl"
@@ -21,8 +21,8 @@
         name="carrera"
         placeholder="Carrera"
         required="required"
-      />
-
+      
+      ></textarea>
       <input
         type="number"
         formControlName="fechaInicio"

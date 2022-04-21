@@ -22,8 +22,8 @@ export class ExperienceEditComponent implements OnInit {
 
     this.form = this.formbuilder.group(
       {
-        empresa:['', [Validators.required]],
-        puesto: ['', [Validators.required]],
+        empresa:['', [Validators.required, Validators.maxLength(250)]],
+        puesto: ['', [Validators.required, Validators.maxLength(250)]],
         fechaInicio: ['', [Validators.required]],
         fechaFin: ['', [Validators.required]]
       }

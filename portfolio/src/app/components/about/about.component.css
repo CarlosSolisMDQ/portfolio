@@ -1,10 +1,15 @@
 .about{
+    margin-top: 2em;
     border: solid 1px black;
     padding: 5px;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
     
+}
+
+h2 {
+    margin-top: 2em;
 }
 
 .about-texto{

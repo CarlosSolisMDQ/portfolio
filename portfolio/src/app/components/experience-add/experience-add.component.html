@@ -1,13 +1,9 @@
-<p>experience-add works!</p>
-
-
-
 
 
 <div class="experienceEdit">
     <form [formGroup]="form" class="custom-form" method="put">
       <h1>Add experience</h1>
-      <input
+      <textarea
         type="text"
         formControlName="empresa"
         class="formControl"
@@ -15,9 +11,9 @@
         name="empresa"
         placeholder="Empresa"
         required="required"
-      />
+      ></textarea>
       
-      <input
+      <textarea
         type="text"
         formControlName="puesto"
         class="formControl"
@@ -25,7 +21,7 @@
         name="puesto"
         placeholder="Puesto"
         required="required"
-      />
+      ></textarea>
 
       <input
         type="number"

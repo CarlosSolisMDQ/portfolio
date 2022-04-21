@@ -1,11 +1,11 @@
-<p>experience-edit works!</p>
+
 
 
 
 <div class="experienceEdit">
     <form [formGroup]="form" class="custom-form" method="put">
       <h1>Edit experience</h1>
-      <input
+      <textarea
         type="text"
         formControlName="empresa"
         class="formControl"
@@ -13,9 +13,9 @@
         name="empresa"
         placeholder="Empresa"
         required="required"
-      />
       
-      <input
+      ></textarea>
+      <textarea
         type="text"
         formControlName="puesto"
         class="formControl"
@@ -23,8 +23,8 @@
         name="puesto"
         placeholder="Puesto"
         required="required"
-      />
-
+      
+      ></textarea>
       <input
         type="number"
         formControlName="fechaInicio"

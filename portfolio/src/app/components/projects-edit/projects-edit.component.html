@@ -1,4 +1,4 @@
-<p>projects-edit works!</p>
+
 
 <div class="projectEdit">
     <form [formGroup]="form" class="custom-form" method="put">
@@ -9,11 +9,11 @@
         class="formControl"
         
         name="nombre"
-        placeholder="Nombre"
+        placeholder="Link al proyecto"
         required="required"
       />
       
-      <input
+      <textarea
         type="text"
         formControlName="descripcion"
         class="formControl"
@@ -21,7 +21,7 @@
         name="descripcion"
         placeholder="Descripcion"
         required="required"
-      />
+      ></textarea>
 
       <input
         type="text"

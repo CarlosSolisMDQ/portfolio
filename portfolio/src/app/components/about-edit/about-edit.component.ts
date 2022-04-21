@@ -21,7 +21,7 @@ export class AboutEditComponent implements OnInit {
 
     this.form = this.formbuilder.group(
       {
-        about:['', [Validators.required, Validators.maxLength(188)]],
+        about:['', [Validators.required, Validators.maxLength(250)]],
           
       }
     )

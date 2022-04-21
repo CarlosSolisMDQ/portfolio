@@ -1,4 +1,4 @@
-<p>skills-edit works!</p>
+
 
 <div class="skillEdit">
     <form [formGroup]="form" class="custom-form" method="put">
@@ -13,7 +13,7 @@
         required="required"
       />
       
-      <input
+      <textarea
         type="text"
         formControlName="habilidad"
         class="formControl"
@@ -21,8 +21,8 @@
         name="habilidad"
         placeholder="Habilidad"
         required="required"
-      />
-
+      
+      ></textarea>
       
       <button type="submit" (click)="editSkill()">Editar</button>
       <button routerLink="">Volver</button>

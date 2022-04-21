@@ -1,0 +1,15 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 50%;
+    height: 10em;
+
+}
+
+button {
+    width: 5em;
+    height: 2em;
+}

@@ -3,6 +3,7 @@
     height: 20em;
     display: flex;
     flex-direction: row;
+    background-position: center center;
 }
 
 .erase-edit-icon{
@@ -39,6 +40,7 @@ i {
     margin-top: -5em;
    
     background-size: contain;
+    background-position: center center;
     
 }
 

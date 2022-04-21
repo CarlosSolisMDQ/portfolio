@@ -18,8 +18,8 @@ export class EducationEditComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService, private formbuilder: FormBuilder, private router: Router) { 
     this.form = this.formbuilder.group(
       {
-        escuela:['', [Validators.required]],
-        carrera: ['', [Validators.required]],
+        escuela:['', [Validators.required, Validators.maxLength(250)]],
+        carrera: ['', [Validators.required, Validators.maxLength(250)]],
         fechaInicio: ['', [Validators.required]],
         fechaFin: ['', [Validators.required]]
       }

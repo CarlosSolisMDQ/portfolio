@@ -20,7 +20,7 @@ export class SkillsEditComponent implements OnInit {
     this.form = this.formbuilder.group(
       {
         porcentaje:['', [Validators.required]],
-        habilidad: ['', [Validators.required]]
+        habilidad: ['', [Validators.required, Validators.maxLength(250)]]
         
       }
     )

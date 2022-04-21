@@ -16,8 +16,8 @@ export class ExperienceAddComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService, private formbuilder: FormBuilder, private router: Router) { 
     this.form = this.formbuilder.group(
       {
-        empresa:['', [Validators.required]],
-        puesto: ['', [Validators.required]],
+        empresa:['', [Validators.required, Validators.maxLength(250)]],
+        puesto: ['', [Validators.required, Validators.maxLength(250)]],
         fechaInicio: ['', [Validators.required]],
         fechaFin: ['', [Validators.required]]
       }
