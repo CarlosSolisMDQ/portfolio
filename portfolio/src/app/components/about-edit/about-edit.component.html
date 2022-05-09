@@ -13,7 +13,7 @@
         placeholder="About"
         required="required"
       ></textarea>
-      <div *ngIf="about.errors?.maxlength || about.errors?.pattern"> 
+      <div *ngIf="about.errors?.maxlength"> 
         <p>No ingresar mas de 250 caracteres (al estilo twitter), "La brevedad es el alma del ingenio".</p>
         
       </div> 
