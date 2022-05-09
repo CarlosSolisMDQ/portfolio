@@ -21,7 +21,7 @@ export class AboutEditComponent implements OnInit {
 
     this.form = this.formbuilder.group(
       {
-        about:['', [Validators.required, Validators.maxLength(250), Validators.pattern('^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]+$')]],
+        about:['', [Validators.required, Validators.maxLength(250)]],
           
       }
     )
