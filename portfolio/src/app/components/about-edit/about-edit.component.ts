@@ -21,7 +21,7 @@ export class AboutEditComponent implements OnInit {
 
     this.form = this.formbuilder.group(
       {
-        about:['', [Validators.required, Validators.maxLength(250)]],
+        about:['', [Validators.required, Validators.maxLength(250), Validators.pattern('^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]+$')]],
           
       }
     )
@@ -35,7 +35,7 @@ export class AboutEditComponent implements OnInit {
   }
 
   editAbout() {
-    console.log("edit-about: " + this.form.value.about);
+    //console.log("edit-about: " + this.form.value.about);
 
       this.userService.aboutEdit(this.form.value.about).subscribe(()=> this.router.navigate([""]))
       
@@ -49,6 +49,9 @@ export class AboutEditComponent implements OnInit {
   .then(() => {
     window.location.reload();
   });
-   }
+  }
+
+  
 
 }
+

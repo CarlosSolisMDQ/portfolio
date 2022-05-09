@@ -3,6 +3,7 @@
 <div class="about">
     <form [formGroup]="form" class="custom-form" method="put">
       <h1>Edit About</h1>
+      
       <textarea
         type="text"
         formControlName="about"
@@ -12,8 +13,9 @@
         placeholder="About"
         required="required"
       ></textarea>
-      <div *ngIf="about.errors?.maxlength"> 
+      <div *ngIf="about.errors?.maxlength || about.errors?.pattern"> 
         <p>No ingresar mas de 250 caracteres (al estilo twitter), "La brevedad es el alma del ingenio".</p>
+        
       </div> 
       
       <button type="submit" (click)="editAbout()">Editar</button>

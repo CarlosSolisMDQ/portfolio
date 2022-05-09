@@ -60,13 +60,19 @@ tokenSubscription = new Subscription()
 
   
 
-  aboutEdit(aboutText: String): Observable<any>{
+  aboutEdit(aboutText: string): Observable<any>{
+    //paso el parametro a literal y no s wrapper String porque el encodeuri no lo toma
+    aboutText = encodeURIComponent(aboutText);
     return this.http.put<any>('https://carlosportfolioap.herokuapp.com/edit/about/2' + "?about=" + aboutText, {});
     
     //despues de luchar como un enano logre hacer funcionar el put que me daba un 
     //error de formato de req. Tengo que solucionar el tema de que hay que hacer un reload para
     //ver los cambios.
     //hice que el texto del about quede fijo en el id 2 because reasons porque mantuve el formato de listas para todas las entidades por fiaca.
+  
+    //actualizacion: para evitar errores con caracteres especiales voy a probar codificar el string
+  
+  
   }
 
   experienceEdit(id: number, empresa: String, puesto: String, fechaInicio: number, fechaFin: number): Observable<any>{
